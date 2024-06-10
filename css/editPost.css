@@ -1,0 +1,36 @@
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
+li{list-style:none}a{text-decoration:none}*{padding:0;margin:0;box-sizing:border-box}
+body{display:flex;justify-content:center;align-items:center;font-family:"Inter";background:#17181c}
+.post-container{position:relative;background:#eee;height:80vh;width:40%;display:flex;justify-content:none;align-items:center;flex-direction:column;border:1px #000 solid;padding:30px;border-radius:10px;margin-top:100px}
+.post-container h4{margin-top:20px;margin-bottom:10px}.post-container .caption{width:100%;margin-bottom:10px}
+.post-container .caption textarea{height:40vh;width:100%;padding:10px;font-family:"Inter";border-radius:10px}
+.post-container input[type=file]{margin-top:10px}.post-container button{height:4vh;width:80%;margin-top:20px}
+.close{position:absolute;top:10px;right:10px;font-size:25px;cursor:pointer}
+
+
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
+*{
+ 
+    font-family: "poppins"; 
+    color:aliceblue;
+}
+
+
+
+
+
+.post-container{
+    background-color: black;
+    position: relative;
+    bottom: 40px;
+    
+    
+}
+
+.post-container .caption textarea{
+    color: #000;
+}
+button{
+    background-color: red;
+    width: 100px;
+}

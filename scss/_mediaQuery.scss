@@ -1,0 +1,76 @@
+
+@media only screen and (max-width: 1366px){
+    .page-container{
+        .content{
+            .feeds{
+                .feeds-content{
+                    @include sizeRatio(100vh, 100%);
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .loginPage{
+
+        .loginGrid{
+            @include sizeRatio(80vh, 80%);
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+    .loginPage{
+
+        .loginGrid{
+            @include sizeRatio(80vh, 75%);
+
+
+            .loginForm{
+                @include display(flex, center, none);
+                flex-direction: column;
+                padding: 0 120px;
+                background-color: $light-color;
+                border-radius: 0 30px 30px 0;
+                color: $text-color;
+    
+                h1{
+                    margin-bottom: 20px;
+                    text-align: center;
+                    font-family: $title-font;
+    
+                    span{
+                        color: #79a185;
+                    }
+                }
+    
+                .input-container{
+                    margin: 7px 0;
+    
+                    input{
+                        margin-top: 5px;
+                        padding: 10px;
+                        width: 100%;
+                    }
+                }
+
+                input[type="submit"]{
+                    margin-top: 10px;
+                }
+    
+                .hr{
+                    margin-top: 30px;
+                }
+    
+                .register{
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }  
+}

@@ -1,0 +1,387 @@
+@import 'config';
+
+
+.page-container{
+    @include sizeRatio(100vh, 100%);
+    font-family: $primary-font;
+    background-color: $darker;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    .left-section{
+        padding: 30px;
+        border-right:#26282d solid 1px;
+        background-color: $dark-container;
+        position: relative;
+
+        .social-media-logo{
+            @include sizeRatio(10vh, 100%);
+            @include display(flex, none, none);
+            padding-top: 5px;
+            font-family: $title-font;
+            color: $title-color;
+        }
+
+        .navbar{
+            input{
+               @include sizeRatio(40px, 100%);
+                background: #28292e;
+                border: #c0c0c0 solid 1px;
+                border-radius: 5px;
+                padding-left: 10px;
+            }
+
+            ul{
+                margin-top: 20px;
+
+                li{
+                    @include sizeRatio(50px, 100%);
+                    font-family: $primary-font;
+                    color: $text-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+
+        button{
+            width: 85%;
+            position: absolute;
+            bottom: 20px;
+            padding: 10px 0;
+            background: $dark-container;
+            border: $border-color solid 1px;
+            color: $text-color;
+        }
+
+    }
+
+    .feeds-section{
+        overflow: auto;
+
+        .heading{
+            @include sizeRatio(80px, 80%);
+            @include display(flex, space-between, center);
+            position: absolute;
+            background: $dark-container;
+            border: $border-color solid 1px;
+            padding: 0 20px;
+            color: $light-color;
+            font-weight: 500;
+            margin-bottom: 50px;
+            z-index: 99999;
+
+
+            .home-nav{
+                @include display(flex, none, none);
+
+                .post-selection{
+                    margin-left: 100px;
+                    
+                    li{
+                        font-weight: 100;
+                        display: inline;
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .profile-nav{
+                margin-right: 50px;
+                @include display(flex, none, center);
+                .bell{
+                    color: #fff;
+                    font-size: 20px;
+                    border: $border-color 1px solid;
+                    border-radius: 50%;
+                    padding:8px;
+                    background: #28292d;
+                }
+
+                .name{
+                    @include display(flex, none, center);
+                    margin-left: 30px;
+
+                    img{
+                        @include sizeRatio(40px, 40px);
+                        margin-left: 10px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+
+        .feeds-content{
+           @include sizeRatio(80vh, 100%);
+           margin-top: 80px;
+           display: grid;
+           grid-template-columns: 3fr 1fr;
+            .feeds{
+                padding: 30px 150px;
+
+                .posting-section{
+                    @include sizeRatio(140px, 100%);
+                    border: 1px $border-color solid;
+                    border-radius: 10px;
+                    padding: 20px;
+
+                  .write-post{
+                    @include sizeRatio(50px, 100%);
+                    @include display(flex, none, center);
+                    img{
+                        @include sizeRatio(35px, 35px);
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+
+                    textarea{
+                        @include sizeRatio(100%, 100%);
+                        border-radius: 10px;
+                        background: transparent;
+                        padding: 10px;
+                        color: #fff;
+                        font-family: $primary-font;
+                    }
+                  }
+
+                  .attach-image{
+                    @include display(flex, space-between, center);
+                    height: 60px;
+                  }
+
+                  button{
+                    background: transparent;
+                    border: 1px $border-color solid;
+                    padding: 5px 30px;
+                    color: #fff;
+                    border-radius: 5px;
+                  }
+                }
+             
+            }
+
+
+           .profile-section{
+            width: 12vw;
+            margin: 50px 100px;
+            position: absolute;
+            right: 0;
+
+            .profile-link{
+                @include sizeRatio(30vh, 100%);
+                border: 1px $border-color solid;
+                border-radius: 10px;
+                color: $text-color;
+
+                img{
+                    @include sizeRatio(150px, 100%);
+                    border-radius: 10px 10px 0 0;
+                }
+
+                #fullname{
+                    margin-top: 10px;
+                    font-size: 15px;
+                    padding: 0 10px;
+                }
+
+                #following{
+                    font-size: 12px;
+                    margin-top: 8px;
+                    padding: 0 10px;
+                }
+
+                button{
+                    @include sizeRatio(30px, 90%);
+                    background: $dark-container;
+                    border: $border-color solid 1px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    color: $title-color;
+                    font-weight: 500;
+                    margin: 0 10px;
+                    margin-top: 20px;
+                   
+                }
+                
+            }   
+
+            .friends-list{
+                @include sizeRatio(40vh, 100%);
+                border: 1px $border-color solid;
+                margin-top: 30px;
+                border-radius: 10px;
+                padding: 10px 20px;
+                color: $text-color;
+            }
+
+           }
+
+        }
+
+    }
+
+}
+
+
+.post-container{
+    @include sizeRatio(auto, 100%);
+    border: $border-color 1px solid;
+    border-radius: 10px;
+    color: $text-color;
+    margin-bottom: 50px;
+
+    .poster-image{
+        @include display(flex, none, none);
+        padding: 20px;
+        padding-bottom: 0;
+        position: relative;
+        color: #fff;
+        
+        .avatar{
+        @include sizeRatio(50px, 50px);
+        border-radius: 50%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        }
+
+        .poster-name{
+            font-size: 15px;
+        }
+
+        .btn-container{
+            position: absolute;
+            right: 20px;
+
+            button{
+                background: transparent;
+                color: $text-color;
+                border: none;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .caption{
+        padding: 0 20px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .post-image{
+        margin-top: 20px;
+        img{
+            max-height: 80vh;
+            @include sizeRatio(auto, 100%);
+        }
+    }
+
+    .comment{
+
+        .inline-comment{
+            @include display(flex, space-between, center);
+            @include sizeRatio(60px, 100%);
+            border-bottom: $border-color 1px solid;
+            font-size: 14px;
+            padding: 0 20px;
+        }
+
+        .comment-input{
+            width: 85%;
+            background: transparent;
+            border: $border-color 1px solid;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        #comment-btn{
+            padding: 10px 20px;
+            margin-left: 10px;
+            background: transparent;
+            border: $border-color 1px solid;
+            color: #fff;
+        }
+    }
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 20px;
+
+}
+
+.comment-h1{
+    position: absolute;
+    top: 30px;
+}
+
+.comment-modal-container{
+    position: relative;
+    @include sizeRatio(80vh, 60%);
+    color: #fff;
+    font-family: $primary-font;
+    position: fixed; top: 10%; left: 50%; transform: translate(-50%, 0); background: $darker; display: none;
+    z-index: 99999;
+    padding: 100px 50px;
+    border: $text-color solid 1px;
+    border-radius: 10px;
+    overflow: auto;
+
+    h1{
+        margin-bottom: 20px;
+    }
+
+    .comment-container{
+        @include sizeRatio(80px, 100%);
+        border: 1px #000 solid;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        button{
+            background: transparent;
+            color: $text-color;
+            border: none;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+.notification-modal{
+    height: 10vh; width: 20%; position: fixed; top: 100px; right: 50px; background: #3b3b3b; display: none; color: #fff;
+    font-family: $primary-font;
+    font-size: 15px;
+    padding: 10px;
+    padding-top: 20px;
+    
+    button{
+        background: transparent;
+        color: #fff;
+        border: none;
+        margin-right: 5px;
+    }
+}
+
+button{
+    cursor: pointer;
+}
+
+li{
+    cursor: pointer;
+}
+
+a{
+    color: $light-color ;
+}
+
+a:visited{
+    color: $light-color;
+}

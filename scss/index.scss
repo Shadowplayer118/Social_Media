@@ -1,0 +1,159 @@
+@import 'config';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+.loginPage{
+    @include sizeRatio(100vh, 100%);
+    @include display(flex, center, center);
+    background-color: #dff1e3;
+
+    .loginGrid{
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        @include sizeRatio(80vh, 60%);
+        font-family: $secondary-font;
+    
+        .loginImage{
+            background-color: $dark-color;
+            border-radius: 30px 0 0 30px;
+        }
+        
+        .loginForm{
+            @include display(flex, center, none);
+            flex-direction: column;
+            padding: 0 120px;
+            background-color: $light-color;
+            border-radius: 0 30px 30px 0;
+            color: $text-color;
+
+            h1{
+                margin-bottom: 20px;
+                text-align: center;
+                font-family: $title-font;
+
+                span{
+                    color: #79a185;
+                }
+            }
+
+            .input-container{
+                margin: 20px 0;
+                label{
+                    font-size: 15px;
+                    color: $light-text-color;
+                }
+
+                input{
+                    margin-top: 5px;
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 1px $light-text-color solid;
+                }
+            }
+
+            input[type="submit"]{
+                background: $button-color;
+                width: 100%;
+                padding: 12px;
+                color: $light-color;
+                border-radius: 5px;
+                border: none;
+                margin-top: 20px;
+            }
+
+            .hr{
+                margin-top: 50px;
+                text-align: center;
+                color: $light-text-color;
+            }
+
+            .register{
+                text-align: center;
+                margin-top: 50px;
+            }
+        }
+    }  
+}
+
+input[type='submit']{
+    cursor: pointer;
+}
+
+a{
+    color: #79a185;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1280px){
+    .loginPage{
+
+        .loginGrid{
+            @include sizeRatio(80vh, 80%);
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+    .loginPage{
+
+        .loginGrid{
+            @include sizeRatio(80vh, 75%);
+
+
+            .loginForm{
+                @include display(flex, center, none);
+                flex-direction: column;
+                padding: 0 120px;
+                background-color: $light-color;
+                border-radius: 0 30px 30px 0;
+                color: $text-color;
+    
+                h1{
+                    margin-bottom: 20px;
+                    text-align: center;
+                    font-family: $title-font;
+    
+                    span{
+                        color: #79a185;
+                    }
+                }
+    
+                .input-container{
+                    margin: 7px 0;
+    
+                    input{
+                        margin-top: 5px;
+                        padding: 10px;
+                        width: 100%;
+                    }
+                }
+
+                input[type="submit"]{
+                    margin-top: 10px;
+                }
+    
+                .hr{
+                    margin-top: 30px;
+                }
+    
+                .register{
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }  
+}
